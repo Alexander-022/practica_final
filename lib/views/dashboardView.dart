@@ -51,7 +51,7 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MenuBarView(message: 'Menu'),
+      appBar: const MenuBarView(message: 'Lista de Sucursales'),
       body: ListView.builder(
         padding: const EdgeInsets.all(30),
         itemCount: _sucursales.length,

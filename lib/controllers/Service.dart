@@ -1,4 +1,5 @@
 import 'package:practica_final/controllers/Conexion.dart';
+import 'package:practica_final/models/Product.dart';
 import 'package:practica_final/models/ResponseGeneric.dart';
 import 'package:practica_final/models/Session.dart';
 
@@ -19,10 +20,25 @@ class Service {
     return s;
   }
 
+  Future<Product> saveProduct(Map<String, String?> map) async {
+  ResponseGeneric rs = await _con.post("loteproducto/save", map);
+  Product s = Product();
+  s.add(rs);
+  if (rs.code != '200') {
+    s.token = s.datos["token"];
+  
+  } 
+  return s;
+}
+
+
+
   Future<ResponseGeneric> listData() async{
     ResponseGeneric rg = await _con.get("lproducto");
     return rg;
   }
+
+ 
 
 
 

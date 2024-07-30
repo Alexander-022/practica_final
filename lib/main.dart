@@ -1,7 +1,12 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:practica_final/views/dashboardView.dart';
 import 'package:practica_final/views/loginView.dart';
 import 'package:practica_final/views/mapView.dart';
+import 'package:practica_final/views/mapaSaView.dart';
+import 'package:practica_final/views/actualizarView.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +45,10 @@ class MyApp extends StatelessWidget {
       routes: {
         "/home": (context) => const LoginView(),
         '/principal': (context) => const DashBoard(),
-        '/map': (context) => const MapView()
+        '/map': (context) => const MapView(),
+        '/mapSave': (context) => const MapaSaView(),
+        '/editar': (context) => const ActualizarView()
+        
       
       },
       onGenerateRoute: ((settings) {

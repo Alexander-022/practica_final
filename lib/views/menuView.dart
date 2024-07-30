@@ -92,6 +92,12 @@ class _MenuBarViewState extends State<MenuBarView> {
                           child: const Text("Mapa"),
                           onPressed: () => Navigator.pushNamed(context, '/map'),
                         ),
+
+                        MenuItemButton(
+                          child: const Text("Guardar"),
+                          onPressed: () => Navigator.pushNamed(context, '/mapSave'),
+                        ),
+
                         const SizedBox(height: 16),
                         MenuItemButton(
                           child: const Text("Editar"),
